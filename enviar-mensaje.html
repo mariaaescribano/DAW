@@ -1,0 +1,46 @@
+<!--
+    Página enviar mensaje:
+    Contiene un formulario para enviar un mensaje al anunciante de un anuncio. 
+    Un mensaje tiene un texto y un tipo de mensaje (“Más información”, “Solicitar una cita” y “Comunicar una oferta”).
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Enviar Mensaje al Anunciante</title>
+</head>
+<body>
+
+    <h1>Enviar Mensaje al Anunciante</h1>
+
+    <form action="#" method="post">
+        <!-- Tipo de mensaje -->
+        <p>
+            <label for="tipoMensaje"><strong>Tipo de mensaje:</strong></label><br>
+            <select name="tipoMensaje" id="tipoMensaje" required>
+                <option value="">-- Selecciona un tipo --</option>
+                <option value="informacion">Más información</option>
+                <option value="cita">Solicitar una cita</option>
+                <option value="oferta">Comunicar una oferta</option>
+            </select>
+        </p>
+
+        <!-- Texto del mensaje -->
+        <p>
+            <label for="mensaje"><strong>Mensaje:</strong></label><br>
+            <textarea name="mensaje" id="mensaje" rows="6" cols="50" placeholder="Escribe tu mensaje aquí..." required></textarea>
+        </p>
+
+        <!-- Botones -->
+        <p>
+            <button type="submit">Enviar Mensaje</button>
+            <button type="reset">Limpiar</button>
+        </p>
+    </form>
+
+    <!-- Enlace para volver -->
+    <p><a href="detalle-anuncio.html">⬅ Volver al anuncio</a></p>
+
+</body>
+</html>

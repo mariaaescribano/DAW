@@ -1,0 +1,66 @@
+<!--
+    Página con el formulario de búsqueda:
+    Contiene un formulario para realizar una búsqueda de anun-
+    cios con los siguientes criterios: el tipo de anuncio (venta o alquiler), el tipo de vivienda (obra nueva,
+    vivienda, oficina, local, garaje20), la ciudad y el país en la que se encuentra la vivienda, el precio
+    de la vivienda y la fecha de publicación del anuncio. El usuario puede buscar por solo uno de los
+    campos o los puede combinar para formar una consulta en la que se deben cumplir todos los campos
+    indicados por el usuario.
+-->
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Búsqueda de Anuncios</title>
+</head>
+<body>
+
+<header>
+    <h1>Búsqueda de Anuncios</h1>
+</header>
+
+<main>
+    <form action="#" method="get">
+        <fieldset>
+            <label for="tipoAnuncio">Tipo de anuncio:</label>
+            <select name="tipoAnuncio" id="tipoAnuncio">
+                <option value="">-- Cualquiera --</option>
+                <option value="venta">Venta</option>
+                <option value="alquiler">Alquiler</option>
+            </select>
+
+            <label for="tipoVivienda">Tipo de vivienda:</label>
+            <select name="tipoVivienda" id="tipoVivienda">
+                <option value="">-- Cualquiera --</option>
+                <option value="obraNueva">Obra nueva</option>
+                <option value="vivienda">Vivienda</option>
+                <option value="oficina">Oficina</option>
+                <option value="local">Local</option>
+                <option value="garaje">Garaje</option>
+            </select>
+
+            <label for="ciudad">Ciudad:</label>
+            <input type="text" name="ciudad" id="ciudad" placeholder="Ej: Madrid">
+
+            <label for="pais">País:</label>
+            <input type="text" name="pais" id="pais" placeholder="Ej: España">
+
+            <label for="precio">Precio máximo (€):</label>
+            <input type="number" name="precio" id="precio" min="0" step="500">
+
+            <label for="fecha">Fecha de publicación:</label>
+            <input type="date" name="fecha" id="fecha">
+        </fieldset>
+
+        <div class="botones">
+            <button type="submit">Buscar</button>
+            <button type="reset">Limpiar</button>
+        </div>
+    </form>
+</main>
+
+</body>
+</html>
