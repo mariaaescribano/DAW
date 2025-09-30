@@ -1,0 +1,72 @@
+<!--
+    Archivo: respuesta-solicitar-folleto.html
+    Página con la confirmación después de haber solicitado un folleto 
+    Creado por: María el 30/09/2025
+    Historial de cambios:
+    30/09/2025 Se crea la totalidad del documento
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmación de Solicitud de Folleto</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Solicitud de Folleto Registrada</h1>
+        <p>Gracias por su solicitud. A continuación se muestran los datos que ha proporcionado:</p>
+
+        <table id="datosFolleto">
+            <tr><th>Campo</th><th>Valor</th></tr>
+        </table>
+
+        <p class="cost">Coste del folleto: $25</p>
+
+        <div class="button-container">
+            <button onclick="window.location.href='menu_usuario.html'">Volver al Menú</button>
+        </div>
+    </div>
+
+    <script>
+        // Datos simulados que serían enviados desde el formulario
+        const solicitud = {
+            nombre: "Juan Pérez",
+            correo: "juan.perez@example.com",
+            textoAdicional: "Información adicional sobre mi anuncio.",
+            calle: "Calle Falsa",
+            numero: "123",
+            piso: "2",
+            puerta: "B",
+            codigoPostal: "28080",
+            localidad: "Madrid",
+            provincia: "Madrid",
+            pais: "España",
+            telefono: "600123456",
+            colorPortada: "#000000",
+            copias: 2,
+            resolucion: "300 DPI",
+            anuncio: "Anuncio 1",
+            fecha: "2025-10-10",
+            impresionColor: "Color",
+            impresionPrecio: "Sí"
+        };
+
+        const tabla = document.getElementById("datosFolleto");
+
+        for (const campo in solicitud) {
+            const fila = document.createElement("tr");
+            const celdaCampo = document.createElement("td");
+            celdaCampo.textContent = campo.charAt(0).toUpperCase() + campo.slice(1);
+            const celdaValor = document.createElement("td");
+            celdaValor.textContent = solicitud[campo];
+            fila.appendChild(celdaCampo);
+            fila.appendChild(celdaValor);
+            tabla.appendChild(fila);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!--
+    Archivo: index_no_auth.html
+    En este archivo se define la página principal del sitio web para no autentificados
+    Creado por: Abel Martinez Molina el 23/09/2025
+    Historial de cambios:
+    23/09/2025 Se crea la totalidad del documento
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Principal No Auth</title>
+  <link rel="stylesheet" href="estilos/index-no-auth.css">
+</head>
+
+<body>
+  
+  <header>
+
+    <button id="menu-toggle">☰</button> <!-- Botón hamburguesa -->
+
+    <nav>
+      <ul id="menu">
+        <li><a href="">Link 1</a></li>
+        <li><a href="">Link 2</a></li>
+        <li><a href="">Link 3</a></li>
+      </ul>
+    </nav>
+
+
+    <!-- Botones de autentificacion (Parte única del No Auth)-->
+
+    <button onclick="window.location.href='iniciar_sesion.html'">Sign In</button>
+    <button onclick="window.location.href='registro.html'">Sign Up</button>
+
+  </header>
+
+  <main>
+    
+    <!-- Buscador Rápido -->
+
+    <form>
+        <input type="search" name="search_form" placeholder="Busca en un click...">
+        <button type="button" onclick="window.location.href='listado-resultados.html'">
+          Buscar
+        </button>      
+    </form>
+
+    <!-- Listado de los Últimos 5 Anuncios (Posiblemente sea generado con JS)-->
+    <a href="detalle-anuncio.html">
+      <article>
+        <img src="" alt="">
+        <h1>Title</h1>
+        <p>Body text for whatever you'd like to say</p>
+      </article>
+     </a>
+     <a href="detalle-anuncio.html">
+      <article>
+        <img src="" alt="">
+        <h1>Title</h1>
+        <p>Body text for whatever you'd like to say</p>
+      </article>
+     </a>
+     <a href="detalle-anuncio.html">
+      <article>
+        <img src="" alt="">
+        <h1>Title</h1>
+        <p>Body text for whatever you'd like to say</p>
+      </article>
+     </a>
+     <a href="detalle-anuncio.html">
+      <article>
+        <img src="" alt="">
+        <h1>Title</h1>
+        <p>Body text for whatever you'd like to say</p>
+      </article>
+     </a>
+     <a href="detalle-anuncio.html">
+      <article>
+        <img src="" alt="">
+        <h1>Title</h1>
+        <p>Body text for whatever you'd like to say</p>
+      </article>
+     </a>
+
+    <!-- Boton para el formulario de búsqueda -->
+
+    <button onclick="window.location.href='buscador.html'">Accede al Buscador de Anuncios</button>
+
+  </main>
+
+  <footer>
+    <p>Copyright©2025 - Mi Sitio web</p>
+  </footer>
+
+</body>
+</html>

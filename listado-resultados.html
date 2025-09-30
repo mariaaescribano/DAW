@@ -16,45 +16,74 @@
 </head>
 <body>
 
-<header>
-    <h1>Resultados de la Búsqueda</h1>
-</header>
+    <header>
+        <!-- Para pantallas pequeñas (Se activara con js y css) -->
+    
+        <button><icon class=""></icon></button>
+    
+        <!-- Para pantallas grandes (Se activara con js y css)-->
+    
+        <a href="index_auth.html">
+                    <img src="" width="50" height="50" alt="">
+        </a>
+    
+        <!-- Menu de Navegación (Se escondera para pantallas pequeñas)-->
+    
+        <nav>
+          <ul>
+            <li><a href="">Link</a></li>
+            <li><a href="">Link</a></li>
+            <li><a href="">Link</a></li>
+          </ul>
+        </nav>
+    
+        <!-- Boton para ir al perfil (Parte única del Auth)-->
+    
+        <button onclick="window.location.href='perfil.html'"><icon class=""></icon></button>
+    
+      </header>
 
-<main>
-    <h2>Anuncios Encontrados</h2>
+    <main>
+        <h1>Resultados de Busqueda</h1>
+        <h2>Anuncios Encontrados</h2>
 
-    <!-- Anuncio 1 - Acceso al detalle -->
-    <article class="anuncio">
-        <img src="https://via.placeholder.com/160x120" alt="Foto del anuncio 1">
-        <div class="info">
-            <h3><a class="detalle" href="detalle-anuncio.html">Apartamento céntrico en Madrid</a></h3>
-            <p><strong>Fecha:</strong> 22/09/2025</p>
-            <p><strong>Ciudad:</strong> Madrid</p>
-            <p><strong>País:</strong> España</p>
-            <p class="precio">€ 250,000</p>
-            <button type="submit" href="detalle-anuncio.html">Ver detalles</button>
+        <!-- Anuncio 1 - Acceso al detalle -->
+        <article class="anuncio">
+            <img src="https://via.placeholder.com/160x120" alt="Foto del anuncio 1">
+            <div class="info">
+                <h3><a class="detalle" href="detalle-anuncio.html">Apartamento céntrico en Madrid</a></h3>
+                <p><strong>Fecha:</strong> 22/09/2025</p>
+                <p><strong>Ciudad:</strong> Madrid</p>
+                <p><strong>País:</strong> España</p>
+                <p class="precio">€ 250,000</p>
+                <button type="button" onclick="window.location.href='detalle-anuncio.html'">
+                    Ver Detalles
+                </button>          
+            </div>
+        </article>
+
+        <!-- Anuncio 2 - Error por usuario no registrado -->
+        <article class="anuncio">
+            <img src="https://via.placeholder.com/160x120" alt="Foto del anuncio 2">
+            <div class="info">
+                <h3><a class="detalle">Ático de lujo en Barcelona</a></h3>
+                <p><strong>Fecha:</strong> 20/09/2025</p>
+                <p><strong>Ciudad:</strong> Barcelona</p>
+                <p><strong>País:</strong> España</p>
+                <p class="precio">€ 450,000</p>
+                <button type="submit">Ver detalles</button>
+            </div>
+        </article>
+
+        <div>
+            ❌ <strong>No se puede acceder al detalle del anuncio</strong><br>
+            si el usuario no está registrado.
         </div>
-    </article>
 
-    <!-- Anuncio 2 - Error por usuario no registrado -->
-    <article class="anuncio">
-        <img src="https://via.placeholder.com/160x120" alt="Foto del anuncio 2">
-        <div class="info">
-            <h3><a class="detalle">Ático de lujo en Barcelona</a></h3>
-            <p><strong>Fecha:</strong> 20/09/2025</p>
-            <p><strong>Ciudad:</strong> Barcelona</p>
-            <p><strong>País:</strong> España</p>
-            <p class="precio">€ 450,000</p>
-            <button type="submit" href="detalle-anuncio.html">Ver detalles</button>
-        </div>
-    </article>
-
-    <div>
-        ❌ <strong>No se puede acceder al detalle del anuncio</strong><br>
-        si el usuario no está registrado.
-    </div>
-
-</main>
+    </main>
+    <footer>
+        <p>Copyright©2025 - Mi Sitio web</p>
+    </footer>
 
 </body>
 </html>

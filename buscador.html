@@ -3,7 +3,8 @@
     En este archivo se define la página buscador que servirá para ajustar los resultados de la búsqueda
     Creado por: María el 24/09/2025
     Historial de cambios:
-    24/09/2025 Se crea la totalidad del documento
+    24/09/2025 - Maria - Se crea la estructura principal del documento
+    28/09/2025 - Abel - Se corrigen errores de navegación y se añade el footer
 -->
 
 
@@ -16,11 +17,35 @@
 </head>
 <body>
 
-<header>
-    <h1>Búsqueda de Anuncios</h1>
-</header>
+    <header>
+        <!-- Para pantallas pequeñas (Se activara con js y css) -->
+    
+        <button><icon class=""></icon></button>
+    
+        <!-- Para pantallas grandes (Se activara con js y css)-->
+    
+        <a href="index_auth.html">
+                    <img src="" width="50" height="50" alt="">
+        </a>
+    
+        <!-- Menu de Navegación (Se escondera para pantallas pequeñas)-->
+    
+        <nav>
+          <ul>
+            <li><a href="">Link</a></li>
+            <li><a href="">Link</a></li>
+            <li><a href="">Link</a></li>
+          </ul>
+        </nav>
+    
+        <!-- Boton para ir al perfil (Parte única del Auth)-->
+    
+        <button onclick="window.location.href='perfil.html'"><icon class=""></icon></button>
+    
+      </header>
 
 <main>
+    <h1>Buscador de Anuncios</h1>
     <form action="#" method="get">
         <fieldset>
             <label for="tipoAnuncio">Tipo de anuncio:</label>
@@ -54,11 +79,16 @@
         </fieldset>
 
         <div class="botones">
-            <button type="submit" href="listado-resultados.html">Buscar</button>
+            <button type="button" onclick="window.location.href='listado-resultados.html'">
+                Buscar
+              </button>                
             <button type="reset">Limpiar</button>
         </div>
     </form>
 </main>
+<footer>
+    <p>Copyright©2025 - Mi Sitio web</p>
+</footer>
 
 </body>
 </html>
