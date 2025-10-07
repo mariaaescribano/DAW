@@ -14,58 +14,67 @@
     <meta charset="UTF-8">
     <title>Detalle del Anuncio</title>
     <link rel="stylesheet" href="estilos/detalle-anuncio.css">
+    <link rel="stylesheet" href="estilos/oficial.css">
 </head>
 <body>
-    <header>
-        <!-- Para pantallas pequeñas (Se activara con js y css) -->
-    
-        <button><icon class=""></icon></button>
-    
-        <!-- Para pantallas grandes (Se activara con js y css)-->
-    
-        <a href="index_auth.html">
-                    <img src="" width="50" height="50" alt="">
-        </a>
-    
-        <!-- Menu de Navegación (Se escondera para pantallas pequeñas)-->
-    
+     <header>
+        <!-- Izquierda: hamburguesa + logo -->
+        <section class="left-section">
+          <section class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </section>
+
+          <section class="logo">
+            <i class="fas fa-home"></i>
+            <span>Inicio</span>
+          </section>
+        </section>
+
+        <!-- Menú principal (solo visible en desktop) -->
         <nav>
-          <ul>
-            <li><a href="">Link</a></li>
-            <li><a href="">Link</a></li>
-            <li><a href="">Link</a></li>
-          </ul>
+          <a href="index_auth.html">Inicio</a>
+          <a href="buscador.html">Buscador</a>
+          <a href="solicitar-folleto.html">Folleto</a>
         </nav>
-    
-        <!-- Boton para ir al perfil (Parte única del Auth)-->
-    
-        <button onclick="window.location.href='perfil.html'"><icon class=""></icon></button>
-    
+
+        <!-- Derecha: perfil o botones -->
+        <section class="right-buttons">
+          <!-- Si el usuario NO está logueado -->
+          <button>Registrarse</button>
+          <button>Iniciar sesión</button>
+
+          <!-- Si el usuario SÍ está logueado, reemplaza por: -->
+          <!-- <i class="fas fa-user-circle profile-icon"></i> -->
+        </section>
       </header>
 
       <main>
-
         <h1>Detalle del Anuncio</h1>
 
-        <!-- Información general -->
-        <p><strong>Tipo de anuncio:</strong> Venta</p>
-        <p><strong>Tipo de vivienda:</strong> Vivienda</p>
-        <p><strong>Fecha de publicación:</strong> 22/09/2025</p>
-        <p><strong>Ciudad:</strong> Madrid</p>
-        <p><strong>País:</strong> España</p>
-        <p><strong>Precio:</strong> € 250,000</p>
-    
-        <!-- Foto principal -->
-        <h2>Foto principal</h2>
-        <img src="https://via.placeholder.com/600x400" alt="Foto principal del anuncio">
-    
-        <!-- Título y descripción -->
-        <h2>Título del anuncio</h2>
-        <p>Apartamento céntrico con 2 habitaciones, cocina equipada y balcón con vistas a la ciudad.</p>
-    
-        <!-- Características del anuncio -->
-        <h2>Características</h2>
-        <ul>
+        <section class="info-general">
+          <p><strong>Tipo de anuncio:</strong> Venta</p>
+          <p><strong>Tipo de vivienda:</strong> Vivienda</p>
+          <p><strong>Fecha de publicación:</strong> 22/09/2025</p>
+          <p><strong>Ciudad:</strong> Madrid</p>
+          <p><strong>País:</strong> España</p>
+          <p><strong>Precio:</strong> € 250,000</p>
+        </section>
+
+        <section class="foto-principal">
+          <h2>Foto principal</h2>
+          <img src="https://via.placeholder.com/600x400" alt="Foto principal del anuncio">
+        </section>
+
+        <section class="descripcion">
+          <h2>Título del anuncio</h2>
+          <p>Apartamento céntrico con 2 habitaciones, cocina equipada y balcón con vistas a la ciudad.</p>
+        </section>
+
+        <section class="caracteristicas">
+          <h2>Características</h2>
+          <ul>
             <li>2 habitaciones</li>
             <li>1 baño</li>
             <li>Cocina equipada</li>
@@ -73,23 +82,22 @@
             <li>Ascensor</li>
             <li>Trastero</li>
             <li>Garaje</li>
-        </ul>
-    
-        <!-- Miniaturas de fotos adicionales -->
-        <h2>Fotos adicionales</h2>
-        <img src="https://via.placeholder.com/150x100" alt="Foto 1">
-        <img src="https://via.placeholder.com/150x100" alt="Foto 2">
-        <img src="https://via.placeholder.com/150x100" alt="Foto 3">
+          </ul>
+        </section>
 
-        <!-- Boton para enviar mensaje-->
+        <section class="fotos-adicionales">
+          <h2>Fotos adicionales</h2>
+          <img src="https://via.placeholder.com/150x100" alt="Foto 1">
+          <img src="https://via.placeholder.com/150x100" alt="Foto 2">
+          <img src="https://via.placeholder.com/150x100" alt="Foto 3">
+        </section>
+
         <button onclick="window.location.href='enviar-mensaje.html'">Enviar Mensaje</button>
 
-    
-        <!-- Enlace para volver al listado -->
         <p><a href="listado-resultados.html">⬅ Volver al listado de anuncios</a></p>
-    
-
       </main>
+
+
       <footer>
         <p>Copyright©2025 - Mi Sitio web</p>
       </footer>

@@ -14,9 +14,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Confirmación de Solicitud de Folleto</title>
+    <link rel="stylesheet" href="estilos/respuesta-solicitar-folleto.css">
+    <link rel="stylesheet" href="estilos/oficial.css">
 </head>
 <body>
-    <div class="container">
+    <header>
+        <!-- Izquierda: hamburguesa + logo -->
+        <section class="left-section">
+          <section class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </section>
+
+          <section class="logo">
+            <i class="fas fa-home"></i>
+            <span>Inicio</span>
+          </section>
+        </section>
+
+        <!-- Menú principal (solo visible en desktop) -->
+        <nav>
+          <a href="index_auth.html">Inicio</a>
+          <a href="buscador.html">Buscador</a>
+          <a href="solicitar-folleto.html">Folleto</a>
+        </nav>
+
+        <!-- Derecha: perfil o botones -->
+        <section class="right-buttons">
+          <!-- Si el usuario NO está logueado -->
+          <button>Registrarse</button>
+          <button>Iniciar sesión</button>
+
+          <!-- Si el usuario SÍ está logueado, reemplaza por: -->
+          <!-- <i class="fas fa-user-circle profile-icon"></i> -->
+        </section>
+    </header>
+
+    <section  class="container">
         <h1>Solicitud de Folleto Registrada</h1>
         <p>Gracias por su solicitud. A continuación se muestran los datos que ha proporcionado:</p>
 
@@ -25,13 +60,9 @@
         </table>
 
         <p class="cost">Coste del folleto: $25</p>
+    </section >
 
-        <div class="button-container">
-            <button onclick="window.location.href='menu_usuario.html'">Volver al Menú</button>
-        </div>
-    </div>
-
-    <script>
+    <!-- <script>
         // Datos simulados que serían enviados desde el formulario
         const solicitud = {
             nombre: "Juan Pérez",
@@ -67,6 +98,10 @@
             fila.appendChild(celdaValor);
             tabla.appendChild(fila);
         }
-    </script>
+    </script> -->
+    <footer>
+        <p>Copyright©2025 - Mi Sitio web</p>
+    </footer>
+
 </body>
 </html>

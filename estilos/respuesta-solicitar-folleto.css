@@ -1,0 +1,103 @@
+/* =========================================
+    Archivo: respuesta-solicitar-folleto.css
+   Autor: María
+   Fecha: 7/10/2025
+   Descripción: Estilo para respuesta-solicitar-folleto
+   ========================================= */
+
+/* ====== Contenedor principal ====== */
+.container {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  font-family: Arial, sans-serif;
+  color: #333;
+  text-align: center;
+}
+
+/* ====== Títulos ====== */
+.container h1 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #0077cc;
+}
+
+/* ====== Párrafos ====== */
+.container p {
+  font-size: 1em;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* ====== Tabla de datos ====== */
+#datosFolleto {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+#datosFolleto th,
+#datosFolleto td {
+  border: 1px solid #ddd;
+  padding: 12px 10px;
+  text-align: left;
+}
+
+#datosFolleto th {
+  background: #0077cc;
+  color: white;
+  font-weight: bold;
+}
+
+#datosFolleto tr:nth-child(even) {
+  background: #f7f9fc;
+}
+
+/* ====== Coste del folleto ====== */
+.cost {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #28a745;
+  margin-bottom: 30px;
+}
+
+/* ====== Botón ====== */
+.button-container {
+  text-align: center;
+}
+
+.button-container button {
+  padding: 12px 24px;
+  background: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.button-container button:hover {
+  background: #005fa3;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  #datosFolleto th,
+  #datosFolleto td {
+    padding: 10px 8px;
+    font-size: 0.95em;
+  }
+
+  .button-container button {
+    width: 100%;
+  }
+}
+

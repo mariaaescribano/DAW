@@ -1,157 +1,124 @@
 /* =========================================
    Archivo: detalle-anuncio.css
    Autor: María
-   Fecha: 30/09/2025
-   Descripción: Estilo
+   Fecha: 7/10/2025
+   Descripción: Estilo para la pag de detalles anuncio
    ========================================= */
 
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-    background-color: white; /* Fondo oscuro */
-    color: black;           /* Texto claro */
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-/* =========================================
-   Header
-   ========================================= */
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 20px;
-    background-color: #000; /* Header negro */
-    color: #f5f5f5;
-    flex-wrap: wrap;
-}
-
-header a img {
-    max-width: 50px;
-    height: auto;
-}
-
-header nav ul {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-}
-
-header nav ul li a {
-    color: #f5f5f5;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-header nav ul li a:hover {
-    text-decoration: underline;
-}
-
-header button {
-    background-color: #f5f5f5;
-    color: #000;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-/* =========================================
-   Main
-   ========================================= */
+/* ======= Estilos Generales ======= */
 main {
-    flex: 1;
-    padding: 20px;
-    max-width: 900px;
-    margin: 0 auto;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
 }
 
-main h1, main h2 {
-    color: black;
-    margin-bottom: 10px;
+/* Títulos */
+main h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2em;
+  color: #222;
 }
 
-main p, main ul {
-    margin-bottom: 15px;
-    font-size: 1rem;
+main h2 {
+  margin: 20px 0 10px;
+  color: #0077cc;
+  font-size: 1.3em;
 }
 
-main ul li {
-    margin-bottom: 5px;
+/* ======= Contenedores ======= */
+main section,
+main section,
+main article {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-main img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 15px;
+/* ======= Información general ======= */
+.info-general p {
+  margin: 6px 0;
+  font-size: 0.95em;
 }
 
+.info-general strong {
+  color: #222;
+}
+
+/* ======= Foto principal ======= */
+.foto-principal img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* ======= Características ======= */
+.caracteristicas ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 8px;
+}
+
+.caracteristicas li {
+  background: #f5f8fc;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.95em;
+  color: #444;
+}
+
+/* ======= Fotos adicionales ======= */
+.fotos-adicionales {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.fotos-adicionales img {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.fotos-adicionales img:hover {
+  transform: scale(1.05);
+}
+
+/* ======= Botón de acción ======= */
 main button {
-    background-color: #f5f5f5;
-    color: #000;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    margin-top: 10px;
+  display: block;
+  margin: 20px auto;
+  padding: 12px 24px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 main button:hover {
-    background-color: #e0e0e0;
+  background: #1e7e34;
 }
 
-main a {
-    color: #f5f5f5;
-    text-decoration: none;
+/* ======= Enlace de retorno ======= */
+main p a {
+  text-decoration: none;
+  color: #0077cc;
+  font-weight: bold;
+  transition: color 0.2s ease;
 }
 
-main a:hover {
-    text-decoration: underline;
-}
-
-/* =========================================
-   Footer
-   ========================================= */
-footer {
-    background-color: #000; /* Footer negro */
-    color: #f5f5f5;
-    text-align: center;
-    padding: 15px 0;
-    margin-top: auto;
-}
-
-/* =========================================
-   Responsive
-   ========================================= */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    header nav ul {
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 10px;
-    }
-
-    main {
-        padding: 15px;
-    }
-
-    main button {
-        width: 100%;
-    }
+main p a:hover {
+  color: #005fa3;
 }

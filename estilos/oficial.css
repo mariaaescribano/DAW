@@ -1,0 +1,187 @@
+/* =========================================
+   Archivo: oficial.css
+   Autor: María
+   Fecha: 7/10/2025
+   Descripción: Estilo básico de toda la web (header, footer)
+   ========================================= */
+
+
+
+
+/* FOOTER */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: auto;
+}
+
+
+/* HEADER */
+:root {
+   --primary: #0ea5e9;
+   --bg: #1e293b;
+   --text: #f8fafc;
+   }
+
+   * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   }
+
+   body {
+   font-family: "Poppins", sans-serif;
+   background-color: #f1f5f9;
+   }
+
+   header {
+   width: 100%;
+   background: var(--bg);
+   color: var(--text);
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 10px 20px;
+   position: relative;
+   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+   z-index: 1000;
+   }
+
+   /* Sección izquierda */
+   .left-section {
+   display: flex;
+   align-items: center;
+   gap: 12px;
+   }
+
+   /* Menú hamburguesa */
+   .menu-toggle {
+   display: none;
+   flex-direction: column;
+   justify-content: center;
+   cursor: pointer;
+   gap: 4px;
+   }
+
+   .menu-toggle span {
+   background: var(--text);
+   height: 3px;
+   width: 25px;
+   border-radius: 2px;
+   transition: all 0.3s ease;
+   }
+
+   /* Logo */
+   .logo {
+   display: flex;
+   align-items: center;
+   gap: 6px;
+   font-weight: 600;
+   font-size: 1.1rem;
+   cursor: pointer;
+   }
+
+   .logo i {
+   font-size: 1.5rem;
+   color: var(--primary);
+   }
+
+   /* Menú principal */
+   nav {
+   display: flex;
+   gap: 20px;
+   }
+
+   nav a {
+   color: var(--text);
+   text-decoration: none;
+   font-weight: 500;
+   transition: color 0.3s;
+   }
+
+   nav a:hover {
+   color: var(--primary);
+   }
+
+   /* Botones de perfil / login */
+   .right-buttons {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   }
+
+   .right-buttons button {
+   background: var(--primary);
+   border: none;
+   color: white;
+   padding: 6px 14px;
+   border-radius: 6px;
+   cursor: pointer;
+   font-weight: 500;
+   transition: background 0.3s;
+   }
+
+   .right-buttons button:hover {
+   background: #0284c7;
+   }
+
+   .profile-icon {
+   font-size: 1.8rem;
+   cursor: pointer;
+   color: var(--text);
+   transition: color 0.3s;
+   }
+
+   .profile-icon:hover {
+   color: var(--primary);
+   }
+
+   /* Panel lateral para móvil */
+   .mobile-menu {
+   display: none;
+   flex-direction: column;
+   position: fixed;
+   top: 0;
+   left: -250px;
+   width: 220px;
+   height: 100%;
+   background: var(--bg);
+   padding: 60px 20px;
+   gap: 15px;
+   box-shadow: 2px 0 10px rgba(0,0,0,0.4);
+   transition: left 0.3s ease;
+   z-index: 999;
+   }
+
+   .mobile-menu a {
+   color: var(--text);
+   text-decoration: none;
+   font-size: 1.1rem;
+   font-weight: 500;
+   transition: color 0.3s;
+   }
+
+   .mobile-menu a:hover {
+   color: var(--primary);
+   }
+
+   .mobile-menu.active {
+   left: 0;
+   }
+
+   /* RESPONSIVE */
+   @media (max-width: 768px) {
+   nav {
+      display: none;
+   }
+
+   .menu-toggle {
+      display: flex;
+   }
+
+   .mobile-menu {
+      display: flex;
+   }
+}

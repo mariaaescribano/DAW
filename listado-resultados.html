@@ -13,35 +13,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultados de la Búsqueda</title>
+    <link rel="stylesheet" href="estilos/listado-resultados.css">
+    <link rel="stylesheet" href="estilos/oficial.css">
 </head>
 <body>
 
     <header>
-        <!-- Para pantallas pequeñas (Se activara con js y css) -->
-    
-        <button><icon class=""></icon></button>
-    
-        <!-- Para pantallas grandes (Se activara con js y css)-->
-    
-        <a href="index_auth.html">
-                    <img src="" width="50" height="50" alt="">
-        </a>
-    
-        <!-- Menu de Navegación (Se escondera para pantallas pequeñas)-->
-    
-        <nav>
-          <ul>
-            <li><a href="">Link</a></li>
-            <li><a href="">Link</a></li>
-            <li><a href="">Link</a></li>
-          </ul>
-        </nav>
-    
-        <!-- Boton para ir al perfil (Parte única del Auth)-->
-    
-        <button onclick="window.location.href='perfil.html'"><icon class=""></icon></button>
-    
-      </header>
+    <!-- Izquierda: hamburguesa + logo -->
+    <section class="left-section">
+        <section class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+        </section>
+
+        <section class="logo">
+        <i class="fas fa-home"></i>
+        <span>Inicio</span>
+        </section>
+    </section>
+
+    <!-- Menú principal (solo visible en desktop) -->
+    <nav>
+        <a href="index_auth.html">Inicio</a>
+        <a href="buscador.html">Buscador</a>
+        <a href="solicitar-folleto.html">Folleto</a>
+    </nav>
+
+    <!-- Derecha: perfil o botones -->
+    <section class="right-buttons">
+        <!-- Si el usuario NO está logueado -->
+        <button>Registrarse</button>
+        <button>Iniciar sesión</button>
+
+        <!-- Si el usuario SÍ está logueado, reemplaza por: -->
+        <!-- <i class="fas fa-user-circle profile-icon"></i> -->
+    </section>
+    </header>
 
     <main>
         <h1>Resultados de Busqueda</h1>
@@ -50,7 +58,7 @@
         <!-- Anuncio 1 - Acceso al detalle -->
         <article class="anuncio">
             <img src="https://via.placeholder.com/160x120" alt="Foto del anuncio 1">
-            <div class="info">
+            <section class="info">
                 <h3><a class="detalle" href="detalle-anuncio.html">Apartamento céntrico en Madrid</a></h3>
                 <p><strong>Fecha:</strong> 22/09/2025</p>
                 <p><strong>Ciudad:</strong> Madrid</p>
@@ -59,28 +67,29 @@
                 <button type="button" onclick="window.location.href='detalle-anuncio.html'">
                     Ver Detalles
                 </button>          
-            </div>
+            </section>
         </article>
 
         <!-- Anuncio 2 - Error por usuario no registrado -->
         <article class="anuncio">
             <img src="https://via.placeholder.com/160x120" alt="Foto del anuncio 2">
-            <div class="info">
+            <section class="info">
                 <h3><a class="detalle">Ático de lujo en Barcelona</a></h3>
                 <p><strong>Fecha:</strong> 20/09/2025</p>
                 <p><strong>Ciudad:</strong> Barcelona</p>
                 <p><strong>País:</strong> España</p>
                 <p class="precio">€ 450,000</p>
                 <button type="submit">Ver detalles</button>
-            </div>
+            </section>
         </article>
 
-        <div>
+        <section>
             ❌ <strong>No se puede acceder al detalle del anuncio</strong><br>
             si el usuario no está registrado.
-        </div>
+        </section>
 
     </main>
+   
     <footer>
         <p>Copyright©2025 - Mi Sitio web</p>
     </footer>

@@ -8,87 +8,118 @@
 -->
 
 
+
 <!DOCTYPE html>
 <html lang="es">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Búsqueda de Anuncios</title>
-</head>
-<body>
-
+    <title>Header Responsive Bonito</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="estilos/oficial.css">
+    <link rel="stylesheet" href="estilos/buscador.css">
+  </head>
+  <body>
+    
     <header>
-        <!-- Para pantallas pequeñas (Se activara con js y css) -->
-    
-        <button><icon class=""></icon></button>
-    
-        <!-- Para pantallas grandes (Se activara con js y css)-->
-    
-        <a href="index_auth.html">
-                    <img src="" width="50" height="50" alt="">
-        </a>
-    
-        <!-- Menu de Navegación (Se escondera para pantallas pequeñas)-->
-    
-        <nav>
-          <ul>
-            <li><a href="">Link</a></li>
-            <li><a href="">Link</a></li>
-            <li><a href="">Link</a></li>
-          </ul>
-        </nav>
-    
-        <!-- Boton para ir al perfil (Parte única del Auth)-->
-    
-        <button onclick="window.location.href='perfil.html'"><icon class=""></icon></button>
-    
-      </header>
+      <!-- Izquierda: hamburguesa + logo -->
+      <section  class="left-section">
+        <section  class="menu-toggle" id="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </section >
 
-<main>
-    <h1>Buscador de Anuncios</h1>
-    <form action="#" method="get">
-        <fieldset>
-            <label for="tipoAnuncio">Tipo de anuncio:</label>
-            <select name="tipoAnuncio" id="tipoAnuncio">
-                <option value="">-- Cualquiera --</option>
-                <option value="venta">Venta</option>
-                <option value="alquiler">Alquiler</option>
-            </select>
+        <section  class="logo">
+          <i class="fas fa-home"></i>
+          <span>Inicio</span>
+        </section >
+      </section >
 
-            <label for="tipoVivienda">Tipo de vivienda:</label>
-            <select name="tipoVivienda" id="tipoVivienda">
-                <option value="">-- Cualquiera --</option>
-                <option value="obraNueva">Obra nueva</option>
-                <option value="vivienda">Vivienda</option>
-                <option value="oficina">Oficina</option>
-                <option value="local">Local</option>
-                <option value="garaje">Garaje</option>
-            </select>
+      <!-- Menú principal (solo visible en desktop) -->
+      <nav>
+        <a href="index_auth.html">Inicio</a>
+        <a href="buscador.html">Buscador</a>
+        <a href="solicitar-folleto.html">Folleto</a>
+      </nav>
 
-            <label for="ciudad">Ciudad:</label>
-            <input type="text" name="ciudad" id="ciudad" placeholder="Ej: Madrid">
+      <!-- Derecha: perfil o botones -->
+      <section  class="right-buttons">
+        <!-- Si el usuario NO está logueado -->
+        <button>Registrarse</button>
+        <button>Iniciar sesión</button>
 
-            <label for="pais">País:</label>
-            <input type="text" name="pais" id="pais" placeholder="Ej: España">
+        <!-- Si el usuario SÍ está logueado, reemplaza por: -->
+        <!-- <i class="fas fa-user-circle profile-icon"></i> -->
+      </section >
+    </header>
 
-            <label for="precio">Precio máximo (€):</label>
-            <input type="number" name="precio" id="precio" min="0" step="500">
+    <!-- Menú lateral (móvil) -->
+    <section  class="mobile-menu" id="mobile-menu">
+      <a href="#">Inicio</a>
+      <a href="#">Servicios</a>
+      <a href="#">Nosotros</a>
+      <a href="#">Contacto</a>
+    </section >
 
-            <label for="fecha">Fecha de publicación:</label>
-            <input type="date" name="fecha" id="fecha">
-        </fieldset>
+    <!-- <script>
+      const toggle = document.getElementById('menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
 
-        <div class="botones">
-            <button type="button" onclick="window.location.href='listado-resultados.html'">
-                Buscar
-              </button>                
-            <button type="reset">Limpiar</button>
-        </div>
-    </form>
-</main>
-<footer>
-    <p>Copyright©2025 - Mi Sitio web</p>
-</footer>
+      toggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+      });
+    </script> -->
+  </body>
 
-</body>
+  <main>
+      <h1>Buscador de Anuncios</h1>
+      <form action="#" method="get">
+          <fieldset>
+              <label for="tipoAnuncio">Tipo de anuncio:</label>
+              <select name="tipoAnuncio" id="tipoAnuncio">
+                  <option value="">-- Cualquiera --</option>
+                  <option value="venta">Venta</option>
+                  <option value="alquiler">Alquiler</option>
+              </select>
+
+              <label for="tipoVivienda">Tipo de vivienda:</label>
+              <select name="tipoVivienda" id="tipoVivienda">
+                  <option value="">-- Cualquiera --</option>
+                  <option value="obraNueva">Obra nueva</option>
+                  <option value="vivienda">Vivienda</option>
+                  <option value="oficina">Oficina</option>
+                  <option value="local">Local</option>
+                  <option value="garaje">Garaje</option>
+              </select>
+
+              <label for="ciudad">Ciudad:</label>
+              <input type="text" name="ciudad" id="ciudad" placeholder="Ej: Madrid">
+
+              <label for="pais">País:</label>
+              <input type="text" name="pais" id="pais" placeholder="Ej: España">
+
+              <label for="precio">Precio máximo (€):</label>
+              <input type="number" name="precio" id="precio" min="0" step="500">
+
+              <label for="fecha">Fecha de publicación:</label>
+              <input type="date" name="fecha" id="fecha">
+          </fieldset>
+
+          <section  class="botones">
+              <button type="button" onclick="window.location.href='listado-resultados.html'">
+                  Buscar
+                </button>                
+              <button type="reset">Limpiar</button>
+          </section>
+      </form>
+  </main>
+  <footer>
+      <p>Copyright©2025 - Mi Sitio web</p>
+  </footer>
+
 </html>
+
+
+
+

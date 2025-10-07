@@ -13,44 +13,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Página Principal Auth</title>
+  <link rel="stylesheet" href="estilos/oficial.css">
+  <link rel="stylesheet" href="estilos/index_auth.css">
 </head>
 
 <body>
   
   <header>
-    <!-- Para pantallas pequeñas (Se activara con js y css) -->
+      <!-- Izquierda: hamburguesa + logo -->
+      <section class="left-section">
+        <section class="menu-toggle" id="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </section>
 
-    <button><icon class=""></icon></button>
+        <section class="logo">
+          <i class="fas fa-home"></i>
+          <span>Inicio</span>
+        </section>
+      </section>
 
-    <!-- Para pantallas grandes (Se activara con js y css)-->
+      <!-- Menú principal (solo visible en desktop) -->
+      <nav>
+        <a href="index_auth.html">Inicio</a>
+        <a href="buscador.html">Buscador</a>
+        <a href="solicitar-folleto.html">Folleto</a>
+      </nav>
 
-    <a href="index_auth.html">
-                <img src="" width="50" height="50" alt="">
-    </a>
+      <!-- Derecha: perfil o botones -->
+      <section class="right-buttons">
+        <!-- Si el usuario NO está logueado -->
+        <button>Registrarse</button>
+        <button>Iniciar sesión</button>
 
-    <!-- Menu de Navegación (Se escondera para pantallas pequeñas)-->
-
-    <nav>
-      <ul>
-        <li><a href="">Link</a></li>
-        <li><a href="">Link</a></li>
-        <li><a href="">Link</a></li>
-      </ul>
-    </nav>
-
-    <!-- Boton para ir al perfil (Parte única del Auth)-->
-
-    <button onclick="window.location.href='perfil.html'"><icon class=""></icon></button>
-
+        <!-- Si el usuario SÍ está logueado, reemplaza por: -->
+        <!-- <i class="fas fa-user-circle profile-icon"></i> -->
+      </section>
   </header>
 
   <main>
-    
-    <!-- Buscador Rápido -->
-
     <form>
         <input type="search" name="search_form" placeholder="Busca en un click...">
-        <button type="reset"><icon class=""></icon></button>
+        <button type="reset"><icon class="">Borrar</icon></button>
         <button type="button" onclick="window.location.href='listado-resultados.html'">
           Buscar
         </button>      
